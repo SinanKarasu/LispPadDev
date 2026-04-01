@@ -7,6 +7,7 @@
 
 import SwiftUI
 import LispPadCore
+import SCMUtilsBundleSupport
 
 struct LispPadDevRootView: View {
     #if os(iOS)
@@ -82,9 +83,11 @@ struct LispPadDevRootView: View {
             .padding(supportsSplit ? 16 : 0)
         }
         .task {
-            normalizeSplitMode(isRegularWidth: supportsSplit)
-            if commandText.isEmpty {
-                commandText = initialCommandText()
+            await MainActor.run {
+                normalizeSplitMode(isRegularWidth: supportsSplit)
+                if commandText.isEmpty {
+                    commandText = initialCommandText()
+                }
             }
         }
         .onChange(of: supportsSplit) { _, isRegularWidth in
@@ -839,77 +842,22 @@ private struct BootstrapCommand: Identifiable {
 }
 
 private enum SCMUtilsSupport {
-    private static let fileManager = FileManager.default
-    private static let environment = ProcessInfo.processInfo.environment
-    private static let workspaceBundleRootURL = firstExistingURL(
-        in: [environmentURL(named: "LISPPADDEV_SCMUTILS_BUNDLE", isDirectory: true)] +
-            candidateRoots().flatMap { root in
-                ancestorDirectories(from: root).flatMap { ancestor in
-                    [
-                        ancestor.appendingPathComponent("Packages/SCMUtilsBundle", isDirectory: true),
-                        ancestor.appendingPathComponent("SCMUtilsBundle", isDirectory: true)
-                    ]
-                }
-            }
-    )
-    private static let workspaceProbeScriptURL = firstExistingURL(
-        in: [environmentURL(named: "LISPPADDEV_SCMUTILS_PROBE", isDirectory: false)] +
-            candidateRoots().flatMap { root in
-                ancestorDirectories(from: root).map {
-                    $0.appendingPathComponent("scripts/scmutils_compat_probe.py", isDirectory: false)
-                }
-            }
-    )
-    private static let workspaceBootstrapURL = workspaceBundleRootURL?
-        .appendingPathComponent("Bootstrap/scmutils_lispkit_bootstrap.scm", isDirectory: false)
-    private static let workspaceBundleRoot = workspaceBundleRootURL?.path ?? "Packages/SCMUtilsBundle"
-    private static let workspaceProbeScript = workspaceProbeScriptURL?.path ?? "scripts/scmutils_compat_probe.py"
-    private static let workspaceBootstrap = workspaceBootstrapURL?.path ??
-        "Packages/SCMUtilsBundle/Bootstrap/scmutils_lispkit_bootstrap.scm"
+    private static let bundleRootURL = SCMUtilsBundleSupport.bundleRootURL
+    private static let bootstrapURL = SCMUtilsBundleSupport.bootstrapURL
+    static let isAvailable = SCMUtilsBundleSupport.isAvailable
 
-    private static let bootstrapURL: URL? = {
-        let candidatePaths = [
-            Bundle.main.url(forResource: "scmutils_lispkit_bootstrap", withExtension: "scm", subdirectory: "Bootstrap"),
-            Bundle.main.url(forResource: "scmutils_lispkit_bootstrap", withExtension: "scm", subdirectory: "SCMUtilsBundle/Bootstrap"),
-            Bundle.main.resourceURL?.appendingPathComponent("Bootstrap/scmutils_lispkit_bootstrap.scm"),
-            Bundle.main.resourceURL?.appendingPathComponent("SCMUtilsBundle/Bootstrap/scmutils_lispkit_bootstrap.scm"),
-            workspaceBootstrapURL
-        ]
-        return firstExistingURL(in: candidatePaths)
-    }()
-
-    static let isAvailable = bootstrapURL != nil
-
-    private static let bundleRootURL = bootstrapURL?
-        .deletingLastPathComponent()
-        .deletingLastPathComponent()
-
-    private static let upstreamRoot = bundleRootURL.map {
-        $0.appendingPathComponent("Upstream/scmutils-20230902", isDirectory: true).path
-    }
-    private static let lispKitRoot = bundleRootURL.map {
-        $0.appendingPathComponent("LispKit/scmutils-20230902", isDirectory: true).path
-    }
-    private static let installScript = bundleRootURL.map {
-        $0.appendingPathComponent("Upstream/scmutils-20230902/install.sh", isDirectory: false).path
-    }
-    private static let sourceLoader = bundleRootURL.map {
-        $0.appendingPathComponent("Upstream/scmutils-20230902/load.scm", isDirectory: false).path
-    }
-    private static let sourceLoaderReal = bundleRootURL.map {
-        $0.appendingPathComponent("Upstream/scmutils-20230902/load-real.scm", isDirectory: false).path
-    }
-    private static let probeScript = workspaceProbeScriptURL?.path
-    private static let buildScript = bundleRootURL.map {
-        $0.appendingPathComponent("scripts/build_scmutils_bundle.py", isDirectory: false).path
-    }
-    private static let lispKitBootstrap = bootstrapURL?.path
+    private static let upstreamRoot = SCMUtilsBundleSupport.upstreamRootURL?.path
+    private static let lispKitRoot = SCMUtilsBundleSupport.lispKitRootURL?.path
+    private static let installScript = SCMUtilsBundleSupport.installScriptURL?.path
+    private static let sourceLoader = SCMUtilsBundleSupport.sourceLoaderURL?.path
+    private static let sourceLoaderReal = SCMUtilsBundleSupport.sourceLoaderRealURL?.path
+    private static let probeScript = SCMUtilsBundleSupport.probeScriptURL?.path
+    private static let buildScript = SCMUtilsBundleSupport.buildScriptURL?.path
+    private static let lispKitBootstrap = SCMUtilsBundleSupport.bootstrapURL?.path
 
     static let runtimeLoadCommand = bootstrapURL.map { """
     (load "\($0.path)")
-    """ } ?? """
-    (load "\(workspaceBootstrap)")
-    """
+    """ } ?? ""
 
     static let stagedLoadCommand = """
     ;; LispKit-oriented SCMUtils bundle bootstrap.
@@ -923,8 +871,7 @@ private enum SCMUtilsSupport {
             ";; LispKit-oriented SCMUtils bundle bootstrap.",
             ";; This loads the generated LispKit working copy from SCMUtilsBundle and",
             ";; bypasses MIT Scheme's top-level loader wrappers.",
-            runtimeLoadCommand,
-            "(load \"\(workspaceBootstrap)\")"
+            runtimeLoadCommand
         ].filter { !$0.isEmpty })
 
         return text
@@ -964,8 +911,8 @@ private enum SCMUtilsSupport {
     }()
 
     static let unavailableSummary = """
-    SCMUtils bundle is not available on this device yet, so the shared session will stay in plain LispKit mode.
-    The macOS dev shell can still use a sibling SCMUtils checkout when \(workspaceBundleRoot) is present.
+    SCMUtils package resources are not available in this build yet, so the shared session will stay in plain LispKit mode.
+    Add the local `SCMUtilsBundleSupport` package to this project to bundle the bootstrap and LispKit working copy.
     """
 
     static func buttonTitle(isAvailable: Bool, isLoaded: Bool) -> String {
@@ -975,58 +922,6 @@ private enum SCMUtilsSupport {
         return isAvailable ? "Load SCMUtils" : "SCMUtils Unavailable"
     }
 
-    private static func candidateRoots() -> [URL] {
-        uniqueURLs(
-            [
-                environmentURL(named: "LISPPADDEV_PROJECT_ROOT", isDirectory: true),
-                environmentURL(named: "PROJECT_DIR", isDirectory: true),
-                environmentURL(named: "SOURCE_ROOT", isDirectory: true),
-                environmentURL(named: "SRCROOT", isDirectory: true),
-                Bundle.main.resourceURL,
-                URL(fileURLWithPath: fileManager.currentDirectoryPath, isDirectory: true)
-            ]
-            .compactMap { $0?.standardizedFileURL }
-        )
-    }
-
-    private static func ancestorDirectories(from url: URL) -> [URL] {
-        var ancestors: [URL] = []
-        var current = url.standardizedFileURL
-        while true {
-            ancestors.append(current)
-            let parent = current.deletingLastPathComponent()
-            if parent.path == current.path {
-                return ancestors
-            }
-            current = parent
-        }
-    }
-
-    private static func environmentURL(named name: String, isDirectory: Bool) -> URL? {
-        guard let value = environment[name], !value.isEmpty else {
-            return nil
-        }
-        return URL(fileURLWithPath: value, isDirectory: isDirectory)
-    }
-
-    private static func firstExistingURL(in candidates: [URL?]) -> URL? {
-        for candidate in candidates.compactMap({ $0 }) where fileManager.fileExists(atPath: candidate.path) {
-            return candidate.resolvingSymlinksInPath()
-        }
-        return nil
-    }
-
-    private static func uniqueURLs(_ candidates: [URL]) -> [URL] {
-        var seen = Set<String>()
-        var unique: [URL] = []
-        for candidate in candidates {
-            let normalized = candidate.standardizedFileURL
-            if seen.insert(normalized.path).inserted {
-                unique.append(normalized)
-            }
-        }
-        return unique
-    }
 }
 
 #Preview {

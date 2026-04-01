@@ -22,6 +22,8 @@
 		B068227988F71B1C824E772F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9974932ED0936AFBAF91DEF6 /* Assets.xcassets */; };
 		B0D58DC5BA780576E26B7062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9974932ED0936AFBAF91DEF6 /* Assets.xcassets */; };
 		B20000000000000000000001 /* LispPadCore in Frameworks */ = {isa = PBXBuildFile; productRef = B40000000000000000000001 /* LispPadCore */; };
+		B20000000000000000000002 /* SCMUtilsBundleSupport in Frameworks */ = {isa = PBXBuildFile; productRef = B40000000000000000000002 /* SCMUtilsBundleSupport */; };
+		B20000000000000000000003 /* SCMUtilsBundleSupport in Frameworks */ = {isa = PBXBuildFile; productRef = E582E3C7DC3065093B208F3A /* SCMUtilsBundleSupport */; };
 		B84697023A37CCF6E06DFF59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CACCBD2F47B022D8106F74B /* Cocoa.framework */; };
 		C08C403873857F512C7D4B1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFB3DC92E34A92A674F09B4 /* Foundation.framework */; };
 		E13FA527C5B730247EC7D49C /* SideBySide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407541626169007F4C84F4F4 /* SideBySide.swift */; };
@@ -98,6 +100,7 @@
 				B84697023A37CCF6E06DFF59 /* Cocoa.framework in Frameworks */,
 				54F3E8C09F9AD4A6524D0127 /* Foundation.framework in Frameworks */,
 				98950B0D84F85D66315A6ADA /* LispPadCore in Frameworks */,
+				B20000000000000000000003 /* SCMUtilsBundleSupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,6 +109,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B20000000000000000000001 /* LispPadCore in Frameworks */,
+				B20000000000000000000002 /* SCMUtilsBundleSupport in Frameworks */,
 				C08C403873857F512C7D4B1A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +356,7 @@
 			name = LispPadDev;
 			packageProductDependencies = (
 				B40000000000000000000001 /* LispPadCore */,
+				B40000000000000000000002 /* SCMUtilsBundleSupport */,
 			);
 			productName = LispPadDev;
 			productReference = 9154C76E2ED0BC7F602503DB /* LispPadDev.app */;
@@ -372,6 +377,7 @@
 			name = LispPadDevMac;
 			packageProductDependencies = (
 				E582E3C7DC3065093B208F39 /* LispPadCore */,
+				E582E3C7DC3065093B208F3A /* SCMUtilsBundleSupport */,
 			);
 			productName = LispPadDevMac;
 			productReference = D4D9AA5D0A505E20646D1AB5 /* LispPadDevMac.app */;
@@ -404,6 +410,7 @@
 			minimizedProjectReferenceProxies = 0;
 			packageReferences = (
 				B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */,
+				B30000000000000000000002 /* XCLocalSwiftPackageReference "SCMUtilsBundle" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 29551C07277EF9B12FD48E19 /* Products */;
@@ -742,17 +749,32 @@
 			isa = XCLocalSwiftPackageReference;
 			relativePath = ../../Packages/LispPadCore;
 		};
+		B30000000000000000000002 /* XCLocalSwiftPackageReference "SCMUtilsBundle" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../Packages/SCMUtilsBundle;
+		};
 /* End XCLocalSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		B40000000000000000000001 /* LispPadCore */ = {
 			isa = XCSwiftPackageProductDependency;
+			package = B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */;
 			productName = LispPadCore;
+		};
+		B40000000000000000000002 /* SCMUtilsBundleSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B30000000000000000000002 /* XCLocalSwiftPackageReference "SCMUtilsBundle" */;
+			productName = SCMUtilsBundleSupport;
 		};
 		E582E3C7DC3065093B208F39 /* LispPadCore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */;
 			productName = LispPadCore;
+		};
+		E582E3C7DC3065093B208F3A /* SCMUtilsBundleSupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B30000000000000000000002 /* XCLocalSwiftPackageReference "SCMUtilsBundle" */;
+			productName = SCMUtilsBundleSupport;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
