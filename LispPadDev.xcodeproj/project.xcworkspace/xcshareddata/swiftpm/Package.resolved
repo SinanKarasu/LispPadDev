@@ -42,7 +42,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SinanKarasu/LispPadCore.git",
       "state" : {
-        "revision" : "89c307943c19241814ef672268f0799e869c75b8"
+        "revision" : "2b54769fbad8f64241eabfb2e9afe3be9ae23e5e"
       }
     },
     {
@@ -112,7 +112,7 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/SinanKarasu/swift-lispkit.git",
       "state" : {
-        "revision" : "c94b34f77d443f6e93d244690e69d140c22d3366"
+        "revision" : "196fbc5f14c325deccbd460f103a5e2f529319df"
       }
     },
     {
