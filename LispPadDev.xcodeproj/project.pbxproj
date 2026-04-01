@@ -1,0 +1,760 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F6F0E2FF52EEB66A2CD682A /* Splitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABE2F5BE1C3E6A93FE93F0 /* Splitter.swift */; };
+		1CA4D08EAF47E5BC80DAAC55 /* LispPadDevRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6093BD31BDA431D0D52E1BE7 /* LispPadDevRootView.swift */; };
+		273C6A2C8CDC8517E03EBADB /* Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD9D18407F23384A55CEBF /* Split.swift */; };
+		54F3E8C09F9AD4A6524D0127 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1B9409335D8C7F4AECD650B /* Foundation.framework */; };
+		5866F475F655A7F12BE9E588 /* Splitter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7ABE2F5BE1C3E6A93FE93F0 /* Splitter.swift */; };
+		5D167AB7BED9EF3BE7223618 /* LispPadDevApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602356A5C6C8A98272B6F55 /* LispPadDevApp.swift */; };
+		6626DACE8B8484729FE1A932 /* Split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BD9D18407F23384A55CEBF /* Split.swift */; };
+		776EC60DC36F2C44A74C37CB /* LispPadDevRootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6093BD31BDA431D0D52E1BE7 /* LispPadDevRootView.swift */; };
+		96F7CD4551D89DE7E9689CD2 /* SplitConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633ED7B797ED893BEEDCBF0 /* SplitConfig.swift */; };
+		98950B0D84F85D66315A6ADA /* LispPadCore in Frameworks */ = {isa = PBXBuildFile; productRef = E582E3C7DC3065093B208F39 /* LispPadCore */; };
+		99C5B7BC4D3C4BE9880E6B56 /* SplitConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5633ED7B797ED893BEEDCBF0 /* SplitConfig.swift */; };
+		A2B52AD4B0AD3C611B6C7AF7 /* LispPadUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF3A3AC3C6C4713277BFAC /* LispPadUI.swift */; };
+		B068227988F71B1C824E772F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9974932ED0936AFBAF91DEF6 /* Assets.xcassets */; };
+		B0D58DC5BA780576E26B7062 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9974932ED0936AFBAF91DEF6 /* Assets.xcassets */; };
+		B20000000000000000000001 /* LispPadCore in Frameworks */ = {isa = PBXBuildFile; productRef = B40000000000000000000001 /* LispPadCore */; };
+		B84697023A37CCF6E06DFF59 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CACCBD2F47B022D8106F74B /* Cocoa.framework */; };
+		C08C403873857F512C7D4B1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAFB3DC92E34A92A674F09B4 /* Foundation.framework */; };
+		E13FA527C5B730247EC7D49C /* SideBySide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407541626169007F4C84F4F4 /* SideBySide.swift */; };
+		EAC464208D594E903921D08F /* SideBySide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 407541626169007F4C84F4F4 /* SideBySide.swift */; };
+		EC56B9AD3186DF83E9B202AC /* LispPadDevApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = D602356A5C6C8A98272B6F55 /* LispPadDevApp.swift */; };
+		F71EA7261B475F9979FAC0BE /* LispPadUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4CF3A3AC3C6C4713277BFAC /* LispPadUI.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		17BD9D18407F23384A55CEBF /* Split.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Split.swift; sourceTree = "<group>"; };
+		407541626169007F4C84F4F4 /* SideBySide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SideBySide.swift; sourceTree = "<group>"; };
+		5633ED7B797ED893BEEDCBF0 /* SplitConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SplitConfig.swift; sourceTree = "<group>"; };
+		6093BD31BDA431D0D52E1BE7 /* LispPadDevRootView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LispPadDevRootView.swift; sourceTree = "<group>"; };
+		6CACCBD2F47B022D8106F74B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		9154C76E2ED0BC7F602503DB /* LispPadDev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LispPadDev.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9974932ED0936AFBAF91DEF6 /* Assets.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A10000000000000000000001 /* PORTABLE_IMPORT_AUDIT.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; path = PORTABLE_IMPORT_AUDIT.md; sourceTree = "<group>"; };
+		A10000000000000000000002 /* CanvasConsole.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CanvasConsole.swift; sourceTree = "<group>"; };
+		A10000000000000000000003 /* CanvasPanel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CanvasPanel.swift; sourceTree = "<group>"; };
+		A10000000000000000000004 /* CanvasView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CanvasView.swift; sourceTree = "<group>"; };
+		A10000000000000000000005 /* LispPadDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LispPadDocument.swift; sourceTree = "<group>"; };
+		A10000000000000000000006 /* DirectoryTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DirectoryTracker.swift; sourceTree = "<group>"; };
+		A10000000000000000000007 /* FileExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileExtensions.swift; sourceTree = "<group>"; };
+		A10000000000000000000008 /* FileHierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileHierarchy.swift; sourceTree = "<group>"; };
+		A10000000000000000000009 /* FileObserver.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = FileObserver.swift; sourceTree = "<group>"; };
+		A1000000000000000000000A /* Move.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Move.swift; sourceTree = "<group>"; };
+		A1000000000000000000000B /* NamedRef.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = NamedRef.swift; sourceTree = "<group>"; };
+		A1000000000000000000000C /* Open.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Open.swift; sourceTree = "<group>"; };
+		A1000000000000000000000D /* Organizer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Organizer.swift; sourceTree = "<group>"; };
+		A1000000000000000000000E /* SaveAs.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SaveAs.swift; sourceTree = "<group>"; };
+		A1000000000000000000000F /* DocumentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
+		A10000000000000000000010 /* IntField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = IntField.swift; sourceTree = "<group>"; };
+		A10000000000000000000011 /* MarkdownViewer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MarkdownViewer.swift; sourceTree = "<group>"; };
+		A10000000000000000000012 /* OptionalScrollView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalScrollView.swift; sourceTree = "<group>"; };
+		A10000000000000000000013 /* RTFTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = RTFTextView.swift; sourceTree = "<group>"; };
+		A10000000000000000000014 /* ScrollSheet.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ScrollSheet.swift; sourceTree = "<group>"; };
+		A10000000000000000000015 /* AudioLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AudioLibrary.swift; sourceTree = "<group>"; };
+		A10000000000000000000016 /* LocationLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LocationLibrary.swift; sourceTree = "<group>"; };
+		A10000000000000000000017 /* DocumentationBrowser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DocumentationBrowser.swift; sourceTree = "<group>"; };
+		A10000000000000000000018 /* DocumentationBrowserState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DocumentationBrowserState.swift; sourceTree = "<group>"; };
+		A10000000000000000000019 /* DocumentationDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DocumentationDetailView.swift; sourceTree = "<group>"; };
+		A1000000000000000000001A /* LispPadApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LispPadApp.swift; sourceTree = "<group>"; };
+		A1000000000000000000001B /* LispPadGlobals.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LispPadGlobals.swift; sourceTree = "<group>"; };
+		A1000000000000000000001C /* SessionLog.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SessionLog.swift; sourceTree = "<group>"; };
+		A1000000000000000000001D /* Appearance.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		A1000000000000000000001E /* HistoryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = HistoryManager.swift; sourceTree = "<group>"; };
+		A1000000000000000000001F /* Console.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
+		A10000000000000000000020 /* ConsoleOutputView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ConsoleOutputView.swift; sourceTree = "<group>"; };
+		A10000000000000000000021 /* EnvironmentDetailView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentDetailView.swift; sourceTree = "<group>"; };
+		A10000000000000000000022 /* EnvironmentManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentManager.swift; sourceTree = "<group>"; };
+		A10000000000000000000023 /* EnvironmentView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EnvironmentView.swift; sourceTree = "<group>"; };
+		A10000000000000000000024 /* Interpreter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Interpreter.swift; sourceTree = "<group>"; };
+		A10000000000000000000025 /* InterpreterState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = InterpreterState.swift; sourceTree = "<group>"; };
+		A10000000000000000000026 /* LibraryManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LibraryManager.swift; sourceTree = "<group>"; };
+		A10000000000000000000027 /* AsyncResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncResult.swift; sourceTree = "<group>"; };
+		A10000000000000000000028 /* Characters.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
+		A10000000000000000000029 /* Mutable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Mutable.swift; sourceTree = "<group>"; };
+		A1000000000000000000002A /* TaskSerializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TaskSerializer.swift; sourceTree = "<group>"; };
+		A1000000000000000000002B /* ThreadUtil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ThreadUtil.swift; sourceTree = "<group>"; };
+		A1000000000000000000002C /* Zoomable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Zoomable.swift; sourceTree = "<group>"; };
+		A1B9409335D8C7F4AECD650B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BAFB3DC92E34A92A674F09B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		C7ABE2F5BE1C3E6A93FE93F0 /* Splitter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Splitter.swift; sourceTree = "<group>"; };
+		D4D9AA5D0A505E20646D1AB5 /* LispPadDevMac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LispPadDevMac.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D602356A5C6C8A98272B6F55 /* LispPadDevApp.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LispPadDevApp.swift; sourceTree = "<group>"; };
+		F4CF3A3AC3C6C4713277BFAC /* LispPadUI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LispPadUI.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7B85F4AADC64B7CDEBB2039C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B84697023A37CCF6E06DFF59 /* Cocoa.framework in Frameworks */,
+				54F3E8C09F9AD4A6524D0127 /* Foundation.framework in Frameworks */,
+				98950B0D84F85D66315A6ADA /* LispPadCore in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF542DDA3FB8E40942E5B154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B20000000000000000000001 /* LispPadCore in Frameworks */,
+				C08C403873857F512C7D4B1A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		29551C07277EF9B12FD48E19 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9154C76E2ED0BC7F602503DB /* LispPadDev.app */,
+				D4D9AA5D0A505E20646D1AB5 /* LispPadDevMac.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3CF67BA4118DC7F2346F44A3 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				5633ED7B797ED893BEEDCBF0 /* SplitConfig.swift */,
+				C7ABE2F5BE1C3E6A93FE93F0 /* Splitter.swift */,
+				17BD9D18407F23384A55CEBF /* Split.swift */,
+				407541626169007F4C84F4F4 /* SideBySide.swift */,
+			);
+			name = Navigation;
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4E66245F1B81C537CDB5BFD9 /* LispPadDev */ = {
+			isa = PBXGroup;
+			children = (
+				3CF67BA4118DC7F2346F44A3 /* Navigation */,
+				A30000000000000000000001 /* Upstream */,
+				D602356A5C6C8A98272B6F55 /* LispPadDevApp.swift */,
+				F4CF3A3AC3C6C4713277BFAC /* LispPadUI.swift */,
+				6093BD31BDA431D0D52E1BE7 /* LispPadDevRootView.swift */,
+				9974932ED0936AFBAF91DEF6 /* Assets.xcassets */,
+			);
+			name = LispPadDev;
+			path = LispPadDev;
+			sourceTree = "<group>";
+		};
+		6B91A3B23E355B9484798115 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF3CF5AC5E483B1ABFF92AB0 /* iOS */,
+				CD5D070BA212A6924668FD3B /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000001 /* Upstream */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000001 /* PORTABLE_IMPORT_AUDIT.md */,
+				A30000000000000000000002 /* LispPadPortable */,
+			);
+			name = Upstream;
+			path = Upstream;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000002 /* LispPadPortable */ = {
+			isa = PBXGroup;
+			children = (
+				A30000000000000000000003 /* Canvas */,
+				A30000000000000000000004 /* Editor */,
+				A30000000000000000000005 /* Files */,
+				A30000000000000000000006 /* Generic Views */,
+				A30000000000000000000007 /* Libraries */,
+				A30000000000000000000008 /* Library Browser */,
+				A1000000000000000000001A /* LispPadApp.swift */,
+				A1000000000000000000001B /* LispPadGlobals.swift */,
+				A30000000000000000000009 /* Log */,
+				A3000000000000000000000A /* Preferences */,
+				A3000000000000000000000B /* Session */,
+				A3000000000000000000000C /* Util */,
+			);
+			name = LispPadPortable;
+			path = LispPadPortable;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000003 /* Canvas */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000002 /* CanvasConsole.swift */,
+				A10000000000000000000003 /* CanvasPanel.swift */,
+				A10000000000000000000004 /* CanvasView.swift */,
+			);
+			name = Canvas;
+			path = Canvas;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000004 /* Editor */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000005 /* LispPadDocument.swift */,
+			);
+			name = Editor;
+			path = Editor;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000005 /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000006 /* DirectoryTracker.swift */,
+				A10000000000000000000007 /* FileExtensions.swift */,
+				A10000000000000000000008 /* FileHierarchy.swift */,
+				A10000000000000000000009 /* FileObserver.swift */,
+				A1000000000000000000000A /* Move.swift */,
+				A1000000000000000000000B /* NamedRef.swift */,
+				A1000000000000000000000C /* Open.swift */,
+				A1000000000000000000000D /* Organizer.swift */,
+				A1000000000000000000000E /* SaveAs.swift */,
+			);
+			name = Files;
+			path = Files;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000006 /* Generic Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000000F /* DocumentView.swift */,
+				A10000000000000000000010 /* IntField.swift */,
+				A10000000000000000000011 /* MarkdownViewer.swift */,
+				A10000000000000000000012 /* OptionalScrollView.swift */,
+				A10000000000000000000013 /* RTFTextView.swift */,
+				A10000000000000000000014 /* ScrollSheet.swift */,
+			);
+			name = "Generic Views";
+			path = "Generic Views";
+			sourceTree = "<group>";
+		};
+		A30000000000000000000007 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000015 /* AudioLibrary.swift */,
+				A10000000000000000000016 /* LocationLibrary.swift */,
+			);
+			name = Libraries;
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		A30000000000000000000008 /* Library Browser */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000017 /* DocumentationBrowser.swift */,
+				A10000000000000000000018 /* DocumentationBrowserState.swift */,
+				A10000000000000000000019 /* DocumentationDetailView.swift */,
+			);
+			name = "Library Browser";
+			path = "Library Browser";
+			sourceTree = "<group>";
+		};
+		A30000000000000000000009 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000001C /* SessionLog.swift */,
+			);
+			name = Log;
+			path = Log;
+			sourceTree = "<group>";
+		};
+		A3000000000000000000000A /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000001D /* Appearance.swift */,
+				A1000000000000000000001E /* HistoryManager.swift */,
+			);
+			name = Preferences;
+			path = Preferences;
+			sourceTree = "<group>";
+		};
+		A3000000000000000000000B /* Session */ = {
+			isa = PBXGroup;
+			children = (
+				A1000000000000000000001F /* Console.swift */,
+				A10000000000000000000020 /* ConsoleOutputView.swift */,
+				A10000000000000000000021 /* EnvironmentDetailView.swift */,
+				A10000000000000000000022 /* EnvironmentManager.swift */,
+				A10000000000000000000023 /* EnvironmentView.swift */,
+				A10000000000000000000024 /* Interpreter.swift */,
+				A10000000000000000000025 /* InterpreterState.swift */,
+				A10000000000000000000026 /* LibraryManager.swift */,
+			);
+			name = Session;
+			path = Session;
+			sourceTree = "<group>";
+		};
+		A3000000000000000000000C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				A10000000000000000000027 /* AsyncResult.swift */,
+				A10000000000000000000028 /* Characters.swift */,
+				A10000000000000000000029 /* Mutable.swift */,
+				A1000000000000000000002A /* TaskSerializer.swift */,
+				A1000000000000000000002B /* ThreadUtil.swift */,
+				A1000000000000000000002C /* Zoomable.swift */,
+			);
+			name = Util;
+			path = Util;
+			sourceTree = "<group>";
+		};
+		CD5D070BA212A6924668FD3B /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				6CACCBD2F47B022D8106F74B /* Cocoa.framework */,
+				A1B9409335D8C7F4AECD650B /* Foundation.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		DF3CF5AC5E483B1ABFF92AB0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BAFB3DC92E34A92A674F09B4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		E03DF5A1815C07BD36DA7F33 = {
+			isa = PBXGroup;
+			children = (
+				29551C07277EF9B12FD48E19 /* Products */,
+				6B91A3B23E355B9484798115 /* Frameworks */,
+				4E66245F1B81C537CDB5BFD9 /* LispPadDev */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05EB3505567725B190BC4306 /* LispPadDev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F5B7686EECFB19203E209F2 /* Build configuration list for PBXNativeTarget "LispPadDev" */;
+			buildPhases = (
+				6EAC4862FB7936EDE9BB3DC5 /* Sources */,
+				CF542DDA3FB8E40942E5B154 /* Frameworks */,
+				3F672D570CC1759C0171A52A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LispPadDev;
+			packageProductDependencies = (
+				B40000000000000000000001 /* LispPadCore */,
+			);
+			productName = LispPadDev;
+			productReference = 9154C76E2ED0BC7F602503DB /* LispPadDev.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2101249BAF80B42E4AD9583D /* LispPadDevMac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7CD8CF927E9CD8AADCB42D63 /* Build configuration list for PBXNativeTarget "LispPadDevMac" */;
+			buildPhases = (
+				68C57FA1677DCE3CE9764142 /* Sources */,
+				7B85F4AADC64B7CDEBB2039C /* Frameworks */,
+				C0F49370790C56D4599BCF2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LispPadDevMac;
+			packageProductDependencies = (
+				E582E3C7DC3065093B208F39 /* LispPadCore */,
+			);
+			productName = LispPadDevMac;
+			productReference = D4D9AA5D0A505E20646D1AB5 /* LispPadDevMac.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		200E639ED3C570944D65268A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 2630;
+				LastUpgradeCheck = 2630;
+				TargetAttributes = {
+					05EB3505567725B190BC4306 = {
+						CreatedOnToolsVersion = 26.3;
+					};
+				};
+			};
+			buildConfigurationList = 88A52CBEC1DB43B677103BBA /* Build configuration list for PBXProject "LispPadDev" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E03DF5A1815C07BD36DA7F33;
+			minimizedProjectReferenceProxies = 0;
+			packageReferences = (
+				B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 29551C07277EF9B12FD48E19 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				05EB3505567725B190BC4306 /* LispPadDev */,
+				2101249BAF80B42E4AD9583D /* LispPadDevMac */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F672D570CC1759C0171A52A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B068227988F71B1C824E772F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0F49370790C56D4599BCF2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B0D58DC5BA780576E26B7062 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		68C57FA1677DCE3CE9764142 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D167AB7BED9EF3BE7223618 /* LispPadDevApp.swift in Sources */,
+				F71EA7261B475F9979FAC0BE /* LispPadUI.swift in Sources */,
+				1CA4D08EAF47E5BC80DAAC55 /* LispPadDevRootView.swift in Sources */,
+				99C5B7BC4D3C4BE9880E6B56 /* SplitConfig.swift in Sources */,
+				5866F475F655A7F12BE9E588 /* Splitter.swift in Sources */,
+				6626DACE8B8484729FE1A932 /* Split.swift in Sources */,
+				EAC464208D594E903921D08F /* SideBySide.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EAC4862FB7936EDE9BB3DC5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC56B9AD3186DF83E9B202AC /* LispPadDevApp.swift in Sources */,
+				A2B52AD4B0AD3C611B6C7AF7 /* LispPadUI.swift in Sources */,
+				776EC60DC36F2C44A74C37CB /* LispPadDevRootView.swift in Sources */,
+				96F7CD4551D89DE7E9689CD2 /* SplitConfig.swift in Sources */,
+				0F6F0E2FF52EEB66A2CD682A /* Splitter.swift in Sources */,
+				273C6A2C8CDC8517E03EBADB /* Split.swift in Sources */,
+				E13FA527C5B730247EC7D49C /* SideBySide.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		01F5CFA33F9D4B2805AE167E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0668C9C1E06A1058A5576AC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=xros*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=xrsimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bozuk.LispPadDev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "2,7";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		26AD04AC33C3EEE95D2BB6FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LispPadDevMac;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bozuk.LispPadDevMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		9AF966F08E30CE54A8D778E7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4HVP45GV3U;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=xros*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=xrsimulator*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphoneos*]" = YES;
+				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
+				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 26.2;
+				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bozuk.LispPadDev;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = auto;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator xros xrsimulator";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "2,7";
+				XROS_DEPLOYMENT_TARGET = 26.2;
+			};
+			name = Debug;
+		};
+		A5445CF012751A0848E8D2F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		DB462E2566DFB059B4002830 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = LispPadDevMac;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = org.bozuk.LispPadDevMac;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F5B7686EECFB19203E209F2 /* Build configuration list for PBXNativeTarget "LispPadDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0668C9C1E06A1058A5576AC0 /* Release */,
+				9AF966F08E30CE54A8D778E7 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7CD8CF927E9CD8AADCB42D63 /* Build configuration list for PBXNativeTarget "LispPadDevMac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DB462E2566DFB059B4002830 /* Release */,
+				26AD04AC33C3EEE95D2BB6FF /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88A52CBEC1DB43B677103BBA /* Build configuration list for PBXProject "LispPadDev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				01F5CFA33F9D4B2805AE167E /* Debug */,
+				A5445CF012751A0848E8D2F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ../../Packages/LispPadCore;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B40000000000000000000001 /* LispPadCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LispPadCore;
+		};
+		E582E3C7DC3065093B208F39 /* LispPadCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */;
+			productName = LispPadCore;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 200E639ED3C570944D65268A /* Project object */;
+}
