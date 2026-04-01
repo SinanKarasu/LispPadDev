@@ -1,22 +1,17 @@
 # LispPadDev
 
-`LispPadDev` is the standalone app shell for the LispPad work. It builds as a SwiftUI app for macOS, iPadOS, and visionOS while depending on sibling package checkouts for the shared Lisp runtime and the optional SCMUtils staging bundle.
+`LispPadDev` is the standalone app shell for the LispPad work. It builds as a SwiftUI app for macOS, iPadOS, and visionOS while depending on GitHub-hosted Swift packages for the shared Lisp runtime and the SCMUtils staging bundle.
 
-## Workspace Layout
+## Package Sources
 
-This repo expects the surrounding checkout to look like this:
+The app project resolves its direct packages from GitHub:
 
-```text
-<workspace>/
-  Packages/
-    swift-lispkit/
-    LispPadCore/
-    SCMUtilsBundle/
-  Projects/
-    LispPadDev/
-```
+- `https://github.com/SinanKarasu/LispPadCore.git`
+- `https://github.com/SinanKarasu/SCMUtilsBundle.git`
 
-The app project resolves `LispPadCore` via `../../Packages/LispPadCore`, and `LispPadCore` resolves the local `swift-lispkit` fork via `../swift-lispkit`.
+`LispPadCore` in turn resolves the LispKit fork from:
+
+- `https://github.com/SinanKarasu/swift-lispkit.git`
 
 ## Build
 
@@ -30,9 +25,8 @@ xcodebuild -project LispPadDev.xcodeproj -scheme LispPadDev -destination 'generi
 
 ## SCMUtils
 
-`LispPadDev` can stage the SCMUtils bootstrap when a sibling `Packages/SCMUtilsBundle` checkout is present. The app now resolves that bundle and the local probe script through relative workspace discovery instead of machine-specific paths.
+`LispPadDev` stages SCMUtils through the bundled `SCMUtilsBundleSupport` package resources, so the app no longer depends on machine-specific sibling folder layout.
 
 ## Distribution
 
 This repository is distributed under GPLv3. In its current form, it is intended for source distribution and self-managed/internal builds, not standard App Store distribution.
-

@@ -744,36 +744,44 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../Packages/LispPadCore;
+/* Begin XCRemoteSwiftPackageReference section */
+		B30000000000000000000001 /* XCRemoteSwiftPackageReference "LispPadCore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SinanKarasu/LispPadCore.git";
+			requirement = {
+				kind = revision;
+				revision = 89c307943c19241814ef672268f0799e869c75b8;
+			};
 		};
-		B30000000000000000000002 /* XCLocalSwiftPackageReference "SCMUtilsBundle" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../Packages/SCMUtilsBundle;
+		B30000000000000000000002 /* XCRemoteSwiftPackageReference "SCMUtilsBundle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SinanKarasu/SCMUtilsBundle.git";
+			requirement = {
+				kind = revision;
+				revision = a1ede3d1ccab40a01ac5f632685fed439a6abcda;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		B40000000000000000000001 /* LispPadCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */;
+			package = B30000000000000000000001 /* XCRemoteSwiftPackageReference "LispPadCore" */;
 			productName = LispPadCore;
 		};
 		B40000000000000000000002 /* SCMUtilsBundleSupport */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B30000000000000000000002 /* XCLocalSwiftPackageReference "SCMUtilsBundle" */;
+			package = B30000000000000000000002 /* XCRemoteSwiftPackageReference "SCMUtilsBundle" */;
 			productName = SCMUtilsBundleSupport;
 		};
 		E582E3C7DC3065093B208F39 /* LispPadCore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B30000000000000000000001 /* XCLocalSwiftPackageReference "LispPadCore" */;
+			package = B30000000000000000000001 /* XCRemoteSwiftPackageReference "LispPadCore" */;
 			productName = LispPadCore;
 		};
 		E582E3C7DC3065093B208F3A /* SCMUtilsBundleSupport */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B30000000000000000000002 /* XCLocalSwiftPackageReference "SCMUtilsBundle" */;
+			package = B30000000000000000000002 /* XCRemoteSwiftPackageReference "SCMUtilsBundle" */;
 			productName = SCMUtilsBundleSupport;
 		};
 /* End XCSwiftPackageProductDependency section */

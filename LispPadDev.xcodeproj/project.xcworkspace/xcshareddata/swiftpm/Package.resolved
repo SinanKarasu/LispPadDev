@@ -1,5 +1,5 @@
 {
-  "originHash" : "d87ecce254e06fcfe7cb8bd232af00a80e2f8252d469f2544a99c18b6a5b0ac2",
+  "originHash" : "a601757fc0c92848bb37335ae501e0a20578d52b9b3a3f6d0065fab38111a2eb",
   "pins" : [
     {
       "identity" : "bitbytedata",
@@ -38,12 +38,28 @@
       }
     },
     {
+      "identity" : "lisppadcore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SinanKarasu/LispPadCore.git",
+      "state" : {
+        "revision" : "89c307943c19241814ef672268f0799e869c75b8"
+      }
+    },
+    {
       "identity" : "oauth2",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/p2/OAuth2.git",
       "state" : {
         "revision" : "3f6a18beb221636581e66d8d0cbec1a3948b4df3",
         "version" : "5.3.5"
+      }
+    },
+    {
+      "identity" : "scmutilsbundle",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SinanKarasu/SCMUtilsBundle.git",
+      "state" : {
+        "revision" : "a1ede3d1ccab40a01ac5f632685fed439a6abcda"
       }
     },
     {
@@ -89,6 +105,14 @@
       "state" : {
         "branch" : "main",
         "revision" : "9648f32126ade414b00b9551c27870d4ad9b168c"
+      }
+    },
+    {
+      "identity" : "swift-lispkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SinanKarasu/swift-lispkit.git",
+      "state" : {
+        "revision" : "c94b34f77d443f6e93d244690e69d140c22d3366"
       }
     },
     {
